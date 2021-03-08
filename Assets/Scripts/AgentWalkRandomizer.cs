@@ -6,7 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class AgentWalkRandomizer : MonoBehaviour
 {
-    public float Range = 25.0f;
+    public float Range = 10.0f;
     NavMeshAgent agent;
 
     void Start()
@@ -18,7 +18,7 @@ public class AgentWalkRandomizer : MonoBehaviour
     {
         if (agent.pathPending || agent.remainingDistance > 0.1f)
             return;
-
-        agent.destination = Range * Random.insideUnitCircle;
+        if (Input.GetMouseButton(1))
+            agent.destination = Range * Random.insideUnitCircle;
     }
 }

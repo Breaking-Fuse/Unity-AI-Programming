@@ -5,9 +5,30 @@ using UnityEngine.AI;
 
 public class AgentController : MonoBehaviour
 {
+    //Knock Settings
+    public float knockRadius = 12.0f;
+
     // Update is called once per frame
     void Update()
     {
+
+        bool hasKnocked = false;
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            StartCoroutine(PlayKnock());
+            hasKnocked = true;
+        }
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, knockRadius);
+        for (int i = 0; i < hitColliders.Length; i++)
+        {
+            if (hitColliders[i].tag == "Guard" && hasKnocked)
+            {
+                hitColliders[i].GetComponent<GuardController>().InvestigatePoint(this.transform.position);
+                Debug.Log(i.ToString() + " heard a knock");
+            }
+        }
+
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -16,5 +37,13 @@ public class AgentController : MonoBehaviour
                 this.GetComponent<NavMeshAgent>().SetDestination(hit.point);
             }
         }       
+    }
+
+
+    IEnumerator PlayKnock()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+        yield return new WaitForSeconds(audio.clip.length);
     }
 }
