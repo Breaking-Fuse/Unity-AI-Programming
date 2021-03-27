@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Guard
+  - Unit
+  - Building
+  - UnitSpawnArea
+  - Base
+  - Tower
   layers:
   - Default
   - TransparentFX

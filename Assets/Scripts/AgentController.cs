@@ -11,7 +11,6 @@ public class AgentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         bool hasKnocked = false;
         if (Input.GetKeyUp(KeyCode.Space))
         {

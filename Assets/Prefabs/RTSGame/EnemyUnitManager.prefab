@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6073850128062597345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6073850128062597344}
+  - component: {fileID: 6073850128062597347}
+  m_Layer: 0
+  m_Name: EnemyUnitManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6073850128062597344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073850128062597345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -130.73999, y: 27.898933, z: -104.597824}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6073850128062597347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073850128062597345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6faa0b38438b144099aa4e2e4f92bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 7611300171577253461, guid: 5860652a67346bb4e8c85559e953529b,
+    type: 3}
+  Team: 1
+  baseManager: {fileID: 0}
+  prefabWarriorUnit: {fileID: 218929882181925137, guid: 423a4b8f072c1a54fa669cd1f843e6be,
+    type: 3}
+  prefabRangerUnit: {fileID: 1736623825445989050, guid: f1e66da82cca2834c8fd07e4455716b7,
+    type: 3}
+  prefabRogueUnit: {fileID: 4519986875738278584, guid: bde98f18e6d8f534f8807c1a23cf494a,
+    type: 3}
+  prefabHealerUnit: {fileID: 5912242891662978029, guid: 0559211beb8ed1a4bb3edecd6fa14bb0,
+    type: 3}
+  Units: []
+  rivalBase: {fileID: 7162092308308782244, guid: 3eabcbd25ec7bcd44a781ab3ac9a1b78,
+    type: 3}
+  prefabLeftEnemySpawnArea: {fileID: 1207239249078905102, guid: e65daa953cc979742b3047e40a45bdd2,
+    type: 3}
+  prefabRightEnemySpawnArea: {fileID: 8876204375321809730, guid: dadda0de168e87d478c57b26e234102f,
+    type: 3}

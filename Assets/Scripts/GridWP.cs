@@ -527,6 +527,15 @@ public class GridWP : MonoBehaviour
             return false;
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
 }

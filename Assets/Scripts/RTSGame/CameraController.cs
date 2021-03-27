@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SmoothFollow : MonoBehaviour
+[ExecuteInEditMode]
+public class CameraController : MonoBehaviour
 {
 
 	// The target we are following
@@ -14,7 +15,7 @@ public class SmoothFollow : MonoBehaviour
 	public float heightDamping = 2.0f;
 
     // Place the script in the Camera-Control group in the component menu
-    [AddComponentMenu("Camera-Control/Smooth Follow")]
+    [AddComponentMenu("Camera-Control/CameraController")]
 
     void LateUpdate()
 	{
@@ -45,4 +46,9 @@ public class SmoothFollow : MonoBehaviour
 		// Always look at the target
 		transform.LookAt(target);
 	}
+
+	public void SetTargetTransform(Transform transform)
+    {
+		this.target = transform;
+    }
 }

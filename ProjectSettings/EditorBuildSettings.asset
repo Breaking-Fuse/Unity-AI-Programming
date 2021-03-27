@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Chapter 5 - FiniteStateMachineActivity.unity
-    guid: 003dc6a0657129741a4170d678d71be1
+    path: Assets/Scenes/RTSGame.unity
+    guid: e4f48644c3336c2448a4bb660c16e823
   m_configObjects: {}
